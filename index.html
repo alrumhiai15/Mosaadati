@@ -1,242 +1,52 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#8f63d9">
-<meta name="description" content="مساعدتي - لأن كل طالبة تستحق من يساعدها على النجاح">
-<link rel="manifest" href="/manifest.webmanifest">
-<title>مساعدتي</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#a98be5"><title>مساعدتي</title>
 <style>
-:root{--p:#8f63d9;--p2:#bca2ee;--pink:#e98db8;--blue:#62aee8;--mint:#54b99d;--orange:#f2a36b;--ink:#30263d;--muted:#74697f;--bg:#fbf8ff;--card:#fff;--line:#eadff3;--shadow:0 10px 28px rgba(79,47,112,.10)}
-*{box-sizing:border-box}html,body{margin:0;padding:0;background:linear-gradient(180deg,#fbf8ff,#fff 45%,#f3fbff);color:var(--ink);font-family:"Tahoma","Arial",sans-serif}body{min-height:100vh}.app{max-width:1180px;margin:auto;padding-bottom:100px}
-button,input,textarea,select{font:inherit}button{cursor:pointer}.top{padding:14px}.hero{border-radius:30px;padding:24px;background:linear-gradient(135deg,#cdb8f5,#f4b1d0 48%,#a9d9f4);color:#3d2755;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:#ffffff44;left:-45px;top:-65px}.brand{display:flex;align-items:center;gap:14px;position:relative;z-index:1}.logo{width:70px;height:70px;border-radius:22px;background:#fff9;display:grid;place-items:center;font-size:42px}.hero h1{margin:0;font-size:36px}.hero p{margin:7px 0}.subtitle{font-size:14px}.online{display:inline-flex;align-items:center;gap:7px;margin-top:12px;background:#ffffffbb;padding:8px 12px;border-radius:999px;font-size:12px}
-.view{display:none;padding:12px}.view.active{display:block}.section-title{display:flex;justify-content:space-between;align-items:center;margin:5px 2px 12px}.section-title h2{margin:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:#ffffffdd;border:1px solid var(--line);border-radius:23px;padding:18px;box-shadow:var(--shadow)}.card h3{margin:8px 0}.card p{color:var(--muted);line-height:1.75;margin:7px 0 14px}.bigicon{font-size:35px}.feature{border-radius:18px;padding:10px 12px;margin-top:8px;color:#fff;font-weight:bold}.purple{background:linear-gradient(135deg,#8f63d9,#ad8be6)}.pink{background:linear-gradient(135deg,#df75aa,#efa7c8)}.blue{background:linear-gradient(135deg,#4e9bdc,#7cc3ef)}.mint{background:linear-gradient(135deg,#42a88d,#75cdb8)}.orange{background:linear-gradient(135deg,#eb985c,#f6b98a)}
-.btn{border:0;border-radius:14px;padding:11px 15px;background:#eee7f8;color:#624682;font-weight:bold}.btn.primary{background:var(--p);color:white}.btn.pink{background:var(--pink);color:#fff}.btn.small{padding:8px 11px;font-size:13px}.actions{display:flex;gap:8px;flex-wrap:wrap}
-.panel{background:#fff;border:1px solid var(--line);border-radius:23px;padding:18px;box-shadow:var(--shadow);margin-bottom:14px}.panel h3{margin-top:0}.label{font-size:13px;color:var(--muted);margin-top:9px;display:block}input,textarea,select{width:100%;border:1px solid #ddcfe9;background:#fff;border-radius:14px;padding:12px;margin-top:6px;color:var(--ink);outline:none}textarea{min-height:120px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.list{display:grid;gap:9px}.item{background:#faf7fd;border:1px solid #eee3f4;border-radius:16px;padding:12px;display:flex;align-items:center;justify-content:space-between;gap:10px}.item.done{opacity:.55;text-decoration:line-through}.item small{color:var(--muted)}
-.tabs{display:flex;gap:7px;overflow:auto;padding-bottom:4px}.tab{white-space:nowrap;border:1px solid var(--line);background:#fff;padding:9px 13px;border-radius:999px}.tab.active{background:#e9ddfb;color:#633d91;font-weight:bold}
-.answer{background:#fbf8ff;border-right:4px solid var(--p);padding:14px;border-radius:14px;line-height:1.9;margin-top:12px;white-space:pre-wrap}.chat{display:grid;gap:8px;max-height:440px;overflow:auto;margin-bottom:10px}.bubble{padding:12px 14px;border-radius:17px;max-width:88%;line-height:1.8}.user{justify-self:start;background:#e9f7ff}.bot{justify-self:end;background:#f5eafb}.notice{padding:11px 13px;border-radius:14px;background:#fff8e9;border:1px solid #f4dfaa;color:#765c22;font-size:13px}
-.empty{text-align:center;color:var(--muted);padding:20px}.back{margin-bottom:10px}
-.bottom{position:fixed;bottom:0;left:0;right:0;z-index:20;background:#fffffff0;backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;justify-content:center}.bottom-inner{max-width:760px;width:100%;display:grid;grid-template-columns:repeat(5,1fr)}.navbtn{border:0;background:transparent;color:#74697f;padding:10px 4px;font-size:11px}.navbtn b{display:block;font-size:20px;margin-bottom:2px}.navbtn.active{color:var(--p);font-weight:bold}
-.modal{position:fixed;inset:0;background:#1f153355;display:none;align-items:end;justify-content:center;z-index:50}.modal.open{display:flex}.sheet{background:#fff;width:min(720px,100%);border-radius:26px 26px 0 0;padding:20px;max-height:90vh;overflow:auto}.close{float:left;border:0;background:#f0e9f6;border-radius:50%;width:35px;height:35px}
-.splash{position:fixed;inset:0;background:linear-gradient(135deg,#d8c8f8,#ffd6e8,#c9edfb);z-index:100;display:grid;place-items:center;text-align:center;transition:.4s}.splash.hide{opacity:0;pointer-events:none}.splash .box{padding:30px}.splash .slogo{font-size:76px}.splash h1{font-size:48px;margin:10px 0}.splash p{font-size:16px}
-@media(max-width:650px){.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}.hero h1{font-size:30px}.logo{width:58px;height:58px;font-size:33px}.card{padding:15px}.bottom-inner{max-width:100%}}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:linear-gradient(135deg,#faf5ff,#fff7fb,#eef9ff);color:#332c40}.app{max-width:1050px;margin:auto;padding-bottom:95px}header{padding:18px}.brand{background:linear-gradient(135deg,#b79ced,#f1a8c8,#9bd9ef);color:white;border-radius:28px;padding:24px;box-shadow:0 12px 30px #6e557522}.brand h1{margin:0 0 8px;font-size:32px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;padding:12px 18px}.card,.panel{background:#ffffffee;border:1px solid #eee3f5;border-radius:22px;padding:20px;box-shadow:0 8px 24px #6e557512}.card h2{margin:8px 0}.card p{line-height:1.7;color:#665e70}.icon{font-size:32px}.primary{background:#a98be5;color:#fff;padding:12px 18px;border-radius:14px}.secondary{background:#f6edf9;color:#694e82;padding:10px 15px;border-radius:12px;margin:4px}section{padding:10px 18px}.hidden{display:none}textarea,input,select{width:100%;padding:13px;border:1px solid #ddd1e8;border-radius:13px;margin:7px 0;background:#fff}.task{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px;background:#faf7fd;border-radius:13px;margin:7px 0}.status{padding:10px 14px;border-radius:13px;background:#f5f0fa;margin:10px 0}.online{background:#e9faef}.offline{background:#fff4e8}.chat{background:#f8f4fc;padding:12px;border-radius:15px;margin:8px 0}.me{background:#eaf8ff}.assistant{background:#f9edf7}nav{position:fixed;bottom:0;left:0;right:0;background:#ffffffef;backdrop-filter:blur(10px);border-top:1px solid #eadff0;display:flex;justify-content:center;z-index:10}nav button{background:transparent;padding:11px 10px;color:#64566f;min-width:90px}.active{color:#936bc6!important;font-weight:bold}@media(max-width:600px){.brand h1{font-size:27px}.grid{grid-template-columns:1fr;padding:10px 12px}nav button{min-width:20%;font-size:12px}}
 </style>
 </head>
-<body>
-<div class="splash" id="splash"><div class="box"><div class="slogo">🌷</div><h1>مساعدتي</h1><p>لأن كل طالبة تستحق من يساعدها على النجاح</p></div></div>
-
-<div class="app">
-<header class="top"><div class="hero">
-<div class="brand"><div class="logo">👩🏻‍🎓</div><div><h1>مساعدتي</h1><p>لأن كل طالبة تستحق من يساعدها على النجاح</p><p class="subtitle">معاً .. نحو مستقبل أكثر إشراقاً</p><span class="online" id="net">● جارٍ التحقق من الاتصال...</span></div></div>
-</div></header>
-
-<main>
-<section class="view active" id="home">
-<div class="section-title"><h2>مرحباً بك 🌷</h2></div>
-<div class="grid">
-<div class="card"><div class="bigicon">📚</div><h3>مساعد الدراسة</h3><p>شرح الدروس، تلخيصها، وأسئلة تدريبية بطريقة سهلة.</p><button class="btn primary" onclick="openView('study')">ابدئي</button><div class="feature purple">شرح • تدريب • تلخيص</div></div>
-<div class="card"><div class="bigicon">📝</div><h3>حل الواجب</h3><p>اكتبي السؤال أو ارفعي صورة واحصلي على خطة حل خطوة بخطوة.</p><button class="btn pink" onclick="openView('homework')">حل الواجب</button><div class="feature pink">فهم → معطيات → طريقة → إجابة</div></div>
-<div class="card"><div class="bigicon">📅</div><h3>منظم الطالبات</h3><p>واجبات واختبارات ومهام مع حفظ دائم على الجهاز.</p><button class="btn" onclick="openView('organizer')">افتحي المنظم</button><div class="feature blue">المواعيد • التذكير • الإنجاز</div></div>
-<div class="card"><div class="bigicon">💗</div><h3>مساعدتي النفسية</h3><p>عبارات تشجيعية ونصائح للتوتر ومساحة مشاعر خاصة.</p><button class="btn" onclick="openView('wellbeing')">ابدئي</button><div class="feature mint">تشجيع • هدوء • يوميات</div></div>
-<div class="card"><div class="bigicon">🆘</div><h3>أحتاج مساعدة</h3><p>اختاري المشكلة لمعرفة الجهة المدرسية المناسبة.</p><button class="btn" onclick="openView('help')">أحتاج مساعدة</button><div class="feature orange">المعلمة • المرشدة • الإدارة</div></div>
-<div class="card"><div class="bigicon">🤖</div><h3>مساعدتي الذكي</h3><p>مساعد ذكي يحدد الخطوة التالية ويقترح طريقة للتعامل مع المشكلة.</p><button class="btn primary" onclick="openView('ai')">تحدثي معي</button><div class="feature purple">محادثة • إرشاد • خطوة عملية</div></div>
-</div>
-</section>
-
-<section class="view" id="study">
-<div class="section-title"><h2>📚 مساعد الدراسة</h2><button class="btn small" onclick="openView('home')">رجوع</button></div>
-<div class="panel"><p>اكتبي اسم الدرس أو السؤال. عند توفر الإنترنت سيستخدم المساعد الذكي، وعند عدم توفره سيعطيك طريقة مذاكرة محلية.</p>
-<label class="label">المادة</label><select id="studySubject"><option>الرياضيات</option><option>العلوم</option><option>اللغة العربية</option><option>اللغة الإنجليزية</option><option>الدراسات الاجتماعية</option><option>أخرى</option></select>
-<label class="label">الدرس أو السؤال</label><textarea id="studyText" placeholder="مثال: اشرحي لي درس الكسور بطريقة بسيطة"></textarea>
-<div class="actions"><button class="btn primary" onclick="studyAI()">شرح الدرس</button><button class="btn" onclick="localStudy()">طريقة مذاكرة بدون إنترنت</button></div><div id="studyAnswer"></div></div>
-</section>
-
-<section class="view" id="homework">
-<div class="section-title"><h2>📝 حل الواجب</h2><button class="btn small" onclick="openView('home')">رجوع</button></div>
-<div class="panel"><label class="label">السؤال</label><textarea id="hwText" placeholder="اكتبي السؤال هنا..."></textarea><label class="label">أو صورة للسؤال</label><input id="hwImage" type="file" accept="image/*"><div id="preview"></div><div class="actions"><button class="btn pink" onclick="homeworkAI()">ابدئي الحل</button><button class="btn" onclick="homeworkPlan()">عرض خطة الحل</button></div><div id="hwAnswer"></div></div>
-</section>
-
-<section class="view" id="organizer">
-<div class="section-title"><h2>📅 منظم الطالبات</h2><button class="btn primary" onclick="openTask()">+ مهمة جديدة</button></div>
-<div class="tabs"><button class="tab active" data-filter="all" onclick="filterTasks('all',this)">الكل</button><button class="tab" data-filter="homework" onclick="filterTasks('homework',this)">الواجبات</button><button class="tab" data-filter="exam" onclick="filterTasks('exam',this)">الاختبارات</button><button class="tab" data-filter="task" onclick="filterTasks('task',this)">المهام</button></div>
-<div class="panel"><div id="taskList" class="list"></div></div>
-<div class="notice">📌 البيانات تُحفظ محلياً على الجهاز، لذلك تبقى بعد إغلاق التطبيق. إذا حذفتِ بيانات المتصفح/التطبيق قد تُحذف النسخة المحلية.</div>
-</section>
-
-<section class="view" id="wellbeing">
-<div class="section-title"><h2>💗 مساعدتي النفسية</h2><button class="btn small" onclick="openView('home')">رجوع</button></div>
-<div class="grid">
-<div class="card"><div class="bigicon">🌷</div><h3>عبارة تشجيعية</h3><div id="quote" class="answer">اضغطي تحديث للحصول على عبارة.</div><button class="btn" onclick="newQuote()">🔄 تحديث</button></div>
-<div class="card"><div class="bigicon">🌿</div><h3>نصيحة للتوتر</h3><div id="tip" class="answer">اضغطي تحديث للحصول على نصيحة.</div><button class="btn" onclick="newTip()">🔄 تحديث</button></div>
-</div>
-<div class="panel"><h3>📝 مساحة مشاعري</h3><textarea id="journal" placeholder="اكتبي ما تشعرين به... هذه المساحة محفوظة على جهازك."></textarea><button class="btn primary" onclick="saveJournal()">حفظ</button><button class="btn" onclick="clearJournal()">مسح</button><span id="journalStatus"></span></div>
-</section>
-
-<section class="view" id="help">
-<div class="section-title"><h2>🆘 أحتاج مساعدة</h2><button class="btn small" onclick="openView('home')">رجوع</button></div>
-<div class="panel"><p>اختاري ما يصف موقفك:</p><div class="grid">
-<button class="card" onclick="guide('لا أفهم الدرس')">📚<h3>لا أفهم الدرس</h3></button>
-<button class="card" onclick="guide('لدي اختبار قريب')">🗓️<h3>لدي اختبار قريب</h3></button>
-<button class="card" onclick="guide('نسيت واجبي')">📝<h3>نسيت واجبي</h3></button>
-<button class="card" onclick="guide('أحتاج إلى تنظيم وقتي')">⏰<h3>أحتاج إلى تنظيم وقتي</h3></button>
-<button class="card" onclick="guide('مشكلة مدرسية أخرى')">💬<h3>مشكلة مدرسية أخرى</h3></button>
-</div><div id="guideResult"></div></div>
-</section>
-
-<section class="view" id="ai">
-<div class="section-title"><h2>🤖 مساعدتي الذكي</h2><button class="btn small" onclick="openView('home')">رجوع</button></div>
-<div class="panel"><div id="chat" class="chat"><div class="bubble bot">مرحباً 🌷 أخبريني بما تواجهينه، وسأساعدك في تحديد الخطوة التالية.</div></div><div class="actions"><button class="btn small" onclick="quick('لا أفهم درساً')">لا أفهم درساً</button><button class="btn small" onclick="quick('لدي اختبار قريب')">اختبار قريب</button><button class="btn small" onclick="quick('أحتاج تنظيم وقتي')">تنظيم وقتي</button></div><textarea id="chatText" placeholder="اكتبي مشكلتك..."></textarea><button class="btn primary" onclick="sendChat()">إرسال</button></div>
-</section>
-</main>
-</div>
-
-<nav class="bottom"><div class="bottom-inner">
-<button class="navbtn active" onclick="openView('home',this)"><b>⌂</b>الرئيسية</button>
-<button class="navbtn" onclick="openView('study',this)"><b>📚</b>الدراسة</button>
-<button class="navbtn" onclick="openView('organizer',this)"><b>📅</b>المنظم</button>
-<button class="navbtn" onclick="openView('wellbeing',this)"><b>💗</b>نفسي</button>
-<button class="navbtn" onclick="openView('ai',this)"><b>🤖</b>مساعدتي</button>
-</div></nav>
-
-<div class="modal" id="taskModal"><div class="sheet"><button class="close" onclick="closeTask()">×</button><h2>إضافة مهمة</h2><label class="label">نوع المهمة</label><select id="taskType"><option value="homework">واجب</option><option value="exam">اختبار</option><option value="task">مهمة دراسية</option></select><label class="label">العنوان</label><input id="taskTitle" placeholder="مثال: حل تمارين الرياضيات"><div class="row"><div><label class="label">التاريخ</label><input id="taskDate" type="date"></div><div><label class="label">الوقت</label><input id="taskTime" type="time" value="18:00"></div></div><div class="actions" style="margin-top:12px"><button class="btn primary" onclick="saveTask()">حفظ المهمة</button><button class="btn" onclick="closeTask()">إلغاء</button></div></div></div>
-
+<body><div class="app">
+<header><div class="brand"><h1>🌷 مساعدتي</h1><p>لأن كل طالبة تستحق من يساعدها على النجاح</p><p>معاً .. نحو مستقبل أكثر إشراقاً</p></div><div id="connection" class="status">جاري فحص الاتصال...</div></header>
+<section id="home"><div class="grid">
+<div class="card"><div class="icon">📚</div><h2>مساعد الدراسة</h2><p>شرح وتلخيص وأسئلة تدريبية بالذكاء الاصطناعي.</p><button class="primary" onclick="show('study')">ابدئي الدراسة</button></div>
+<div class="card"><div class="icon">📝</div><h2>حل الواجب</h2><p>اكتبي السؤال أو اختاري صورة له.</p><button class="primary" onclick="show('homework')">ابدئي الحل</button></div>
+<div class="card"><div class="icon">📅</div><h2>منظم الطالبات</h2><p>واجبات واختبارات ومهام مع Firebase.</p><button class="primary" onclick="show('organizer')">افتحي المنظم</button></div>
+<div class="card"><div class="icon">💗</div><h2>مساعدتي النفسية</h2><p>تشجيع ونصائح ومساحة للمشاعر.</p><button class="primary" onclick="show('wellbeing')">ابدئي</button></div>
+<div class="card"><div class="icon">🆘</div><h2>أحتاج مساعدة</h2><p>اختاري المشكلة لمعرفة الخطوة التالية.</p><button class="primary" onclick="show('help')">أحتاج مساعدة</button></div>
+<div class="card"><div class="icon">🤖</div><h2>مساعدتي الذكي</h2><p>محادثة حقيقية مع Gemini عبر Firebase AI Logic.</p><button class="primary" onclick="show('ai')">تحدثي مع مساعدتي</button></div>
+</div></section>
+<section id="study" class="hidden"><div class="panel"><h2>📚 مساعد الدراسة</h2><select id="subject"><option>الرياضيات</option><option>العلوم</option><option>اللغة العربية</option><option>اللغة الإنجليزية</option><option>الدراسات الاجتماعية</option></select><textarea id="studyText" placeholder="مثال: اشرحي لي درس الكسور بطريقة سهلة..."></textarea><button class="primary" onclick="aiStudy()">شرح بالذكاء الاصطناعي</button><div id="studyResult"></div></div></section>
+<section id="homework" class="hidden"><div class="panel"><h2>📝 حل الواجب</h2><textarea id="hw" placeholder="اكتبي سؤال الواجب..."></textarea><input type="file" accept="image/*" id="photo"><small>الصورة موجودة للواجهة الآن؛ سنضيف إرسال الصورة إلى Gemini بعد نجاح اختبار النص.</small><br><button class="primary" onclick="aiHomework()">ابدئي الحل</button><div id="hwResult"></div></div></section>
+<section id="organizer" class="hidden"><div class="panel"><h2>📅 منظم الطالبات</h2><select id="taskType"><option>واجب</option><option>اختبار</option><option>مهمة دراسية</option></select><input id="taskInput" placeholder="اسم المهمة"><input id="taskDate" type="date"><button class="primary" onclick="addTask()">+ إضافة مهمة</button><div id="syncMsg" class="status"></div><div id="tasks"></div></div></section>
+<section id="wellbeing" class="hidden"><div class="panel"><h2>💗 مساعدتي النفسية</h2><button class="secondary" onclick="newQuote()">🔄 عبارة تشجيعية</button><button class="secondary" onclick="newTip()">🔄 نصيحة للتوتر</button><div id="quote" class="chat assistant">اضغطي على أحد الزرين 🌷</div><textarea id="journal" placeholder="اكتبي مشاعرك أو يومياتك..."></textarea><button class="primary" onclick="saveJournal()">💾 حفظ مذكرتي</button><div id="journalMsg"></div></div></section>
+<section id="help" class="hidden"><div class="panel"><h2>🆘 أحتاج مساعدة</h2><button class="secondary" onclick="help('الدراسة')">📚 لا أفهم الدرس</button><button class="secondary" onclick="help('اختبار')">📅 لدي اختبار قريب</button><button class="secondary" onclick="help('واجب')">📝 نسيت واجبي</button><button class="secondary" onclick="help('تنظيم')">⏰ أحتاج تنظيم وقتي</button><button class="secondary" onclick="help('أخرى')">💬 مشكلة مدرسية أخرى</button><div id="helpResult"></div></div></section>
+<section id="ai" class="hidden"><div class="panel"><h2>🤖 مساعدتي الذكي</h2><div id="chat"><div class="chat assistant">مرحباً 🌷 أنا مساعدتك الذكية. اكتبي مشكلتك وسأساعدك خطوة بخطوة.</div></div><textarea id="chatInput" placeholder="مثال: عندي اختبار ولا أعرف كيف أبدأ..."></textarea><button class="primary" onclick="sendChat()">إرسال</button></div></section>
+</div><nav><button class="active" onclick="show('home',this)">🏠<br>الرئيسية</button><button onclick="show('study',this)">📚<br>الدراسة</button><button onclick="show('organizer',this)">📅<br>المنظم</button><button onclick="show('wellbeing',this)">💗<br>نفسي</button><button onclick="show('ai',this)">🤖<br>مساعدتي</button></nav>
 <script type="module">
 import {initializeApp} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
-import {getAuth,signInAnonymously} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
-import {getFirestore,doc,setDoc,getDoc} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+import {getAuth,signInAnonymously,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import {getFirestore,collection,addDoc,deleteDoc,doc,query,orderBy,onSnapshot,serverTimestamp,enableMultiTabIndexedDbPersistence} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+import {getAI,getGenerativeModel,GoogleAIBackend} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-ai.js";
 
-/* =========================================================
-   Firebase: ضع بيانات مشروعك هنا.
-   اتركها كما هي مؤقتاً إذا لم تنشئ Firebase بعد؛
-   التطبيق سيستمر بالعمل محلياً.
-   ========================================================= */
-const firebaseConfig={
-  apiKey:"YOUR_FIREBASE_API_KEY",
-  authDomain:"YOUR_FIREBASE_PROJECT.firebaseapp.com",
-  projectId:"YOUR_FIREBASE_PROJECT_ID",
-  storageBucket:"YOUR_FIREBASE_PROJECT.firebasestorage.app",
-  messagingSenderId:"YOUR_FIREBASE_SENDER_ID",
-  appId:"YOUR_FIREBASE_APP_ID"
-};
-let db=null,user=null;
-try{
- if(!firebaseConfig.apiKey.startsWith("YOUR_")){
-  const app=initializeApp(firebaseConfig); db=getFirestore(app);
-  const auth=getAuth(app); const cred=await signInAnonymously(auth); user=cred.user;
-  document.getElementById("net").textContent=navigator.onLine?"● متصل":"● بدون إنترنت";
- }
-}catch(e){console.log("Firebase optional:",e)}
-
-window.openView=function(id,btn){
- document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
- document.getElementById(id).classList.add("active");
- document.querySelectorAll(".navbtn").forEach(b=>b.classList.remove("active"));
- if(btn)btn.classList.add("active");
- else{
-  const map={home:0,study:1,organizer:2,wellbeing:3,ai:4};
-  const bs=document.querySelectorAll(".navbtn"); if(map[id]!==undefined)bs[map[id]].classList.add("active");
- }
- window.scrollTo({top:0,behavior:"smooth"});
- if(id==="organizer")renderTasks();
-};
-
-window.studyAI=async function(){
- const q=document.getElementById("studyText").value.trim(),s=document.getElementById("studySubject").value;
- if(!q){alert("اكتبي اسم الدرس أو السؤال أولاً.");return}
- setAnswer("studyAnswer","جاري تجهيز شرح مبسط...");
- const r=await callAI("أنتِ مساعد دراسة عربي لطالبات المدارس. اشرحي بأسلوب بسيط جداً، ثم أعطي 3 نقاط مهمة و3 أسئلة تدريبية. المادة: "+s+"\\nالسؤال: "+q);
- setAnswer("studyAnswer",r);
-};
-window.localStudy=function(){setAnswer("studyAnswer","خطة مذاكرة بدون إنترنت:\\n1) اكتبي الفكرة الأساسية.\\n2) قسمي الدرس إلى 3 أجزاء.\\n3) اشرحي كل جزء بكلماتك.\\n4) حلي مثالاً.\\n5) اختبري نفسك بثلاثة أسئلة.")};
-window.homeworkPlan=function(){setAnswer("hwAnswer","خطة الحل:\\n1) فهم السؤال.\\n2) تحديد المعطيات.\\n3) تحديد القانون أو الطريقة المناسبة.\\n4) تنفيذ الحل خطوة بخطوة.\\n5) مراجعة الإجابة النهائية.")};
-window.homeworkAI=async function(){
- const text=document.getElementById("hwText").value.trim();
- const file=document.getElementById("hwImage").files[0];
- if(!text&&!file){alert("اكتبي السؤال أو اختاري صورة.");return}
- setAnswer("hwAnswer","جاري تحليل السؤال...");
- let image=null;
- if(file) image=await fileToDataURL(file);
- const prompt="أنتِ مساعد واجبات لطالبات المدارس. اشرحي الحل بالعربية خطوة بخطوة، ولا تكتفي بالجواب النهائي. إذا كان السؤال غير واضح اطلبي توضيحه. السؤال النصي:\\n"+text;
- const r=await callAI(prompt,image);
- setAnswer("hwAnswer",r);
-};
-document.getElementById("hwImage").addEventListener("change",async e=>{
- const f=e.target.files[0]; if(!f)return; const d=await fileToDataURL(f);
- document.getElementById("preview").innerHTML='<img style="max-width:220px;border-radius:15px;margin-top:10px" src="'+d+'">';
-});
-window.quick=function(t){document.getElementById("chatText").value=t;sendChat()};
-window.sendChat=async function(){
- const t=document.getElementById("chatText").value.trim(); if(!t)return;
- addBubble(t,"user");document.getElementById("chatText").value="";
- addBubble("جاري التفكير...","bot");
- const r=await callAI("أنتِ مساعد مدرسي آمن ومشجع. حددي المشكلة، ثم الخطوة التالية، ثم نصيحة عملية قصيرة. إذا كانت المشكلة تتعلق بتنمر أو تهديد أو خطر، وجهي الطالبة إلى شخص بالغ موثوق/المدرسة فوراً. لا تشخّصي حالات نفسية.\\nالمشكلة: "+t);
- const chat=document.getElementById("chat");chat.lastElementChild.textContent=r;
-};
-async function callAI(prompt,imageData=null){
- if(!navigator.onLine)return "لا يوجد اتصال بالإنترنت حالياً. أستطيع مساعدتك محلياً في تنظيم الخطوات، ثم يمكنك إعادة المحاولة عند توفر الإنترنت.";
- try{
-  const body={prompt};
-  if(imageData)body.image=imageData;
-  const res=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
-  const data=await res.json();
-  if(!res.ok)throw new Error(data.error||"AI error");
-  return data.text||"لم يصل رد.";
- }catch(e){return "تعذر الاتصال بالمساعد الذكي الآن. تحققي من اتصال الإنترنت وإعداد API في Vercel.\\n\\nيمكنك استخدام الخطة المحلية في التطبيق مؤقتاً."}
-}
-function addBubble(t,c){const d=document.createElement("div");d.className="bubble "+c;d.textContent=t;document.getElementById("chat").appendChild(d);document.getElementById("chat").scrollTop=999999}
-function setAnswer(id,t){document.getElementById(id).innerHTML='<div class="answer"></div>';document.getElementById(id).firstElementChild.textContent=t}
-function fileToDataURL(f){return new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>ok(r.result);r.onerror=no;r.readAsDataURL(f)})}
-
-let tasks=JSON.parse(localStorage.getItem("mosaadati_tasks")||"[]"),currentFilter="all";
-window.openTask=function(){document.getElementById("taskModal").classList.add("open");document.getElementById("taskDate").value=new Date().toISOString().slice(0,10)};
-window.closeTask=function(){document.getElementById("taskModal").classList.remove("open")};
-window.saveTask=async function(){
- const title=document.getElementById("taskTitle").value.trim();if(!title){alert("اكتبي عنوان المهمة.");return}
- const t={id:crypto.randomUUID(),type:document.getElementById("taskType").value,title,date:document.getElementById("taskDate").value,time:document.getElementById("taskTime").value,done:false};
- tasks.push(t);persistTasks();scheduleReminder(t);closeTask();document.getElementById("taskTitle").value="";renderTasks();syncToFirebase();
-};
-window.filterTasks=function(f,btn){currentFilter=f;document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");renderTasks()};
-window.toggleTask=function(id){const t=tasks.find(x=>x.id===id);if(t)t.done=!t.done;persistTasks();renderTasks();syncToFirebase()};
-window.deleteTask=function(id){tasks=tasks.filter(x=>x.id!==id);persistTasks();renderTasks();syncToFirebase()};
-function persistTasks(){localStorage.setItem("mosaadati_tasks",JSON.stringify(tasks))}
-function renderTasks(){
- const list=document.getElementById("taskList");let a=tasks.filter(t=>currentFilter==="all"||t.type===currentFilter);
- if(!a.length){list.innerHTML='<div class="empty">لا توجد مهام هنا 🌷</div>';return}
- const names={homework:"واجب",exam:"اختبار",task:"مهمة"};
- list.innerHTML=a.sort((x,y)=>(x.date+x.time).localeCompare(y.date+y.time)).map(t=>'<div class="item '+(t.done?"done":"")+'"><div><b>'+esc(t.title)+'</b><br><small>'+names[t.type]+' • '+t.date+' • '+t.time+'</small></div><div class="actions"><button class="btn small" onclick="toggleTask(\''+t.id+'\')">'+(t.done?"↩":"✓")+'</button><button class="btn small" onclick="deleteTask(\''+t.id+'\')">حذف</button></div></div>').join("");
-}
-function scheduleReminder(t){if(!("Notification"in window))return;if(Notification.permission==="granted"){/* browser reminder support is limited; native build will use local notifications */}}
-window.addEventListener("online",()=>document.getElementById("net").textContent="● متصل");
-window.addEventListener("offline",()=>document.getElementById("net").textContent="● بدون إنترنت");
-
-const quotes=["أنتِ قادرة على التعلم خطوة بخطوة 🌷","لا يشترط أن تكوني مثالية؛ يكفي أن تستمري.","كل سؤال لا تعرفينه اليوم يمكن أن يصبح نقطة قوة غداً.","تقدم صغير كل يوم يصنع فرقاً كبيراً.","ثقي بقدرتك على البدء من جديد."];
-const tips=["خذي شهيقاً ببطء 4 ثوانٍ ثم زفيراً 6 ثوانٍ.","قسمي المذاكرة إلى جلسات قصيرة مع فواصل.","ابدئي بأسهل جزء لتقليل شعور الضغط.","قبل الاختبار جهزي أدواتك ونومي بشكل كافٍ.","إذا شعرتِ بضغط شديد، تحدثي مع شخص بالغ تثقين به."];
-let usedQ=JSON.parse(localStorage.getItem("usedQ")||"[]"),usedT=JSON.parse(localStorage.getItem("usedT")||"[]");
-window.newQuote=function(){let i=pickNew(quotes,usedQ);document.getElementById("quote").textContent=quotes[i];saveUsed("usedQ",usedQ,i)};
-window.newTip=function(){let i=pickNew(tips,usedT);document.getElementById("tip").textContent=tips[i];saveUsed("usedT",usedT,i)};
-function pickNew(a,u){if(u.length>=a.length)u.length=0;let choices=a.map((_,i)=>i).filter(i=>!u.includes(i));return choices[Math.floor(Math.random()*choices.length)]}
-function saveUsed(k,u,i){u.push(i);localStorage.setItem(k,JSON.stringify(u))}
-document.getElementById("journal").value=localStorage.getItem("mosaadati_journal")||"";
-window.saveJournal=function(){localStorage.setItem("mosaadati_journal",document.getElementById("journal").value);document.getElementById("journalStatus").textContent=" ✓ تم الحفظ محلياً"};
-window.clearJournal=function(){if(confirm("مسح اليوميات؟")){document.getElementById("journal").value="";localStorage.removeItem("mosaadati_journal")}};
-window.guide=function(x){
- const map={"لا أفهم الدرس":["المعلمة","اطلبي من معلمة المادة شرح النقطة التي لم تفهميها، ويمكنك استخدام مساعد الدراسة للمراجعة."],"لدي اختبار قريب":["المعلمة / المرشدة الطلابية","ضعي موعد الاختبار في المنظم وابدئي خطة مراجعة قصيرة."],"نسيت واجبي":["المعلمة","تحققي من المطلوب وموعد التسليم، ثم أضيفيه فوراً إلى المنظم."],"أحتاج إلى تنظيم وقتي":["المرشدة الطلابية","ابدئي بثلاث مهام فقط اليوم ورتبيها حسب الموعد والأهمية."],"مشكلة مدرسية أخرى":["المرشدة الطلابية / الإدارة المدرسية","إذا كانت المشكلة تحتاج تدخلاً مدرسياً، تحدثي مع المرشدة أو الإدارة حسب طبيعة الموقف."]};
- const [who,advice]=map[x];document.getElementById("guideResult").innerHTML='<div class="answer"><b>الجهة المناسبة: '+who+'</b>\\n'+advice+'</div>';
-};
-async function syncToFirebase(){
- if(!db||!user)return;
- try{await setDoc(doc(db,"students",user.uid),{tasks,updatedAt:Date.now()},{merge:true})}catch(e){console.log(e)}
-}
-async function loadFirebase(){
- if(!db||!user)return;
- try{const s=await getDoc(doc(db,"students",user.uid));if(s.exists()&&Array.isArray(s.data().tasks)&&!tasks.length){tasks=s.data().tasks;persistTasks();renderTasks()}}catch(e){}
-}
-function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
-
-setTimeout(()=>document.getElementById("splash").classList.add("hide"),1000);
-renderTasks();loadFirebase();
-if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js").catch(()=>{});
-</script>
-</body>
-</html>
+/* الصق هنا Firebase Web config من Firebase Console > Project settings > Your apps */
+const firebaseConfig={apiKey:"AIzaSyCltAPk9V6UhvZwgksg0NoTiBiOv9R1HTs",authDomain:"mosaadati-de4c6.firebaseapp.com",projectId:"mosaadati-de4c6",storageBucket:"mosaadati-de4c6.firebasestorage.app",messagingSenderId:"888055101851",appId:"1:888055101851:web:13e5a69e009cc85b4f493e"};
+const READY=!Object.values(firebaseConfig).some(v=>String(v).startsWith("ضع_"));
+let app,auth,db,model,user,stopTasks;
+const $=id=>document.getElementById(id);
+function connection(){let on=navigator.onLine;$('connection').className='status '+(on?'online':'offline');$('connection').textContent=on?'🟢 متصل بالإنترنت':'🟠 بدون إنترنت — المهام المحلية تبقى متاحة';}addEventListener('online',connection);addEventListener('offline',connection);connection();
+window.show=(id,btn)=>{document.querySelectorAll('section').forEach(s=>s.classList.toggle('hidden',s.id!==id));document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');if(id==='organizer')renderTasks()};
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
+function users(name){return collection(db,'users',user.uid,name)}
+async function init(){if(!READY){$('syncMsg').textContent='⚠️ أدخل Firebase config في index.html أولاً.';return}try{app=initializeApp(firebaseConfig);auth=getAuth(app);db=getFirestore(app);try{await enableMultiTabIndexedDbPersistence(db)}catch(e){}onAuthStateChanged(auth,u=>{user=u;if(u){$('syncMsg').textContent='🟢 Firebase متصل — مستخدم مجهول: '+u.uid.slice(0,8)+'…';renderTasks()}});await signInAnonymously(auth);const ai=getAI(app,{backend:new GoogleAIBackend()});model=getGenerativeModel(ai,{model:'gemini-3.8-flash'})}catch(e){console.error(e);$('syncMsg').textContent='❌ Firebase: '+e.message}}init();
+async function addTask(){let text=$('taskInput').value.trim();if(!text)return;try{if(!user)throw Error('لم تكتمل مصادقة Firebase بعد');await addDoc(users('tasks'),{text,type:$('taskType').value,date:$('taskDate').value||'',createdAt:serverTimestamp()});$('taskInput').value='';}catch(e){alert(e.message)}}
+function renderTasks(){if(!db||!user)return;if(stopTasks)stopTasks();const q=query(users('tasks'),orderBy('date','asc'));stopTasks=onSnapshot(q,s=>{$('tasks').innerHTML=s.size?[...s.docs].map(d=>{let x=d.data();return `<div class="task"><span>📌 ${esc(x.type)}: ${esc(x.text)} ${x.date?'('+esc(x.date)+')':''}</span><button class="secondary" onclick="removeTask('${d.id}')">حذف</button></div>`}).join(''):'<p>لا توجد مهام بعد 🌷</p>'},e=>$('syncMsg').textContent='❌ Firestore: '+e.message)}
+window.removeTask=async id=>{try{await deleteDoc(doc(db,'users',user.uid,'tasks',id))}catch(e){alert(e.message)}};
+async function ask(prompt,target){if(!navigator.onLine){$(target).innerHTML='<div class="panel">🟠 لا يوجد إنترنت. عودي عند توفره.</div>';return}if(!model){$(target).innerHTML='<div class="panel">⚠️ Firebase AI Logic غير جاهز. تأكدي من إعداد AI Logic وApp Check.</div>';return}$(target).innerHTML='<div class="panel">🤖 جاري التفكير...</div>';try{let r=await model.generateContent(prompt);$(target).innerHTML='<div class="panel">'+esc(r.response.text()).replace(/\n/g,'<br>')+'</div>'}catch(e){$(target).innerHTML='<div class="panel">❌ خطأ AI: '+esc(e.message)+'</div>'}}
+window.aiStudy=()=>ask(`أنت مساعدة تعليمية لطالبات المدارس. المادة ${$('subject').value}. اشرحي السؤال التالي بالعربية بأسلوب بسيط، ثم مثال، ثم 3 أسئلة تدريبية، ثم 5 نقاط للمراجعة: ${$('studyText').value}`,'studyResult');
+window.aiHomework=()=>ask(`أنت مساعدة واجبات مدرسية. رتبي حل السؤال التالي إلى: 1 فهم السؤال 2 المعطيات 3 القانون/الطريقة 4 الحل خطوة بخطوة 5 الإجابة النهائية. السؤال: ${$('hw').value}`,'hwResult');
+async function saveJournal(){if(!user){alert('Firebase غير جاهز');return}let text=$('journal').value.trim();if(!text)return;try{await addDoc(users('journal'),{text,createdAt:serverTimestamp()});$('journal').value='';$('journalMsg').textContent='💾 تم الحفظ في Firebase.'}catch(e){$('journalMsg').textContent='❌ '+e.message}}
+const quotes=['أنتِ قادرة على التعلم، وخطوة صغيرة اليوم تصنع فرقاً كبيراً غداً. 🌷','كل سؤال تسألينه هو خطوة جديدة نحو الفهم. 📚','الخطأ معلومة تساعدك على معرفة ما تحتاجين إلى تعلمه. ✨'];const tips=['خذي نفساً ببطء واكتبي أهم 3 نقاط تريدين مراجعتها.','قسمي المذاكرة إلى جلسات قصيرة مع فواصل.','ابدئي بالجزء الذي تعرفينه جيداً ثم انتقلي للأصعب.'];function pick(a,k){let used=JSON.parse(localStorage.getItem(k)||'[]');let av=a.filter(x=>!used.includes(x));if(!av.length){used=[];av=a}let v=av[Math.floor(Math.random()*av.length)];used.push(v);localStorage.setItem(k,JSON.stringify(used));return v}window.newQuote=()=>$('quote').textContent=pick(quotes,'quotes');window.newTip=()=>$('quote').textContent=pick(tips,'tips');
+window.help=x=>{let m={الدراسة:'معلمة المادة',اختبار:'المعلمة أو المرشدة الطلابية',واجب:'معلمة المادة',تنظيم:'المرشدة الطلابية',أخرى:'المرشدة الطلابية أو الإدارة المدرسية'};$('helpResult').innerHTML='<div class="panel"><b>الجهة المقترحة:</b><p>'+m[x]+'</p></div>'};
+window.sendChat=async()=>{let t=$('chatInput').value.trim();if(!t)return;$('chat').innerHTML+=`<div class="chat me">${esc(t)}</div>`;$('chatInput').value='';if(!navigator.onLine||!model){$('chat').innerHTML+='<div class="chat assistant">🟠 يحتاج المساعد الذكي إلى الإنترنت.</div>';return}try{let r=await model.generateContent(`أنت مساعدتي الذكي لطالبات المدارس. تحدثي بالعربية وبأسلوب لطيف وواضح. قدمي خطوات عملية قصيرة. إذا كان هناك خطر أو تهديد أو تنمر شديد، شجعي الطالبة على إبلاغ ولي الأمر أو المعلمة أو المرشدة أو الإدارة فوراً. رسالة الطالبة: ${t}`);$('chat').innerHTML+=`<div class="chat assistant">${esc(r.response.text()).replace(/\n/g,'<br>')}</div>`}catch(e){$('chat').innerHTML+=`<div class="chat assistant">❌ ${esc(e.message)}</div>`}};
+</script></body></html>
