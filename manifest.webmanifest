@@ -1,0 +1,13 @@
+{
+  "name": "مساعدتي",
+  "short_name": "مساعدتي",
+  "description": "لأن كل طالبة تستحق من يساعدها على النجاح",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "ar",
+  "theme_color": "#8f63d9",
+  "background_color": "#fbf8ff",
+  "icons": []
+}
